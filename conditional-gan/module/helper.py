@@ -1,9 +1,7 @@
 import numpy as np
 from matplotlib import pyplot as plt
 
-from plotly.offline import init_notebook_mode, iplot
 import plotly.graph_objs as go
-init_notebook_mode()
 
 def generate_z(n, d):
     return np.random.uniform(low=-1.0, high=1.0, size=(n, d))
@@ -53,4 +51,4 @@ def interactive_plot(data1, data2, data1_name='data1', data2_name='data2'):
 	    name = data2_name
 	)
 	data = [trace0, trace1]
-	iplot(data)
+	return data
